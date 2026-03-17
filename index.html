@@ -9,165 +9,189 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --brand-blue: #324376; 
+            --brand-blue: #324376; /* Exact Background Blue from your site */
             --nav-blue: #003366;
         }
-        h1, .serif { font-family: 'Libre Baskerville', serif; }
+        h1, h2, .serif { font-family: 'Libre Baskerville', serif; }
         body { font-family: 'Source Sans Pro', sans-serif; }
         .hero-section { background-color: var(--brand-blue); }
-        .nav-link:hover { color: #5a78d6; }
         
-        .image-container {
+        /* Custom image card styles to match your screenshot exactly */
+        .image-card {
             position: relative;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
             background: white;
-            border-radius: 4px;
+            border-radius: 2px;
+            overflow: hidden;
         }
-        
-        /* The specific text overlay from your screenshot */
         .image-overlay-text {
             position: absolute;
-            top: 12%;
+            top: 10%;
             left: 0;
             right: 0;
             text-align: center;
             color: #003366;
-            padding: 0 30px;
+            padding: 0 20px;
             z-index: 10;
         }
-
-        .growth-chart-overlay {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://www.transparenttextures.com/patterns/graph-paper.png');
-            opacity: 0.1;
-            pointer-events: none;
-        }
-
-        .logo-img {
-            height: 40px;
-            width: auto;
-            object-fit: contain;
-        }
+        .service-card:hover { transform: translateY(-5px); transition: 0.3s; }
     </style>
 </head>
-<body class="bg-white">
+<body class="bg-white text-slate-800">
 
-    <!-- NAVIGATION -->
-    <nav class="bg-white py-6 border-b border-gray-50">
+    <nav class="bg-white py-5 sticky top-0 z-50 border-b border-gray-100">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <!-- Logo Section -->
             <div class="flex items-center space-x-3">
-                <div class="flex items-center">
-                    <!-- Updated with the logo image reference from your site -->
-                    <img src="https://bluepeakfinancialadvisory.website3.me/static/6786196236688f00155b93d6/6786196236688f00155b93d8/67879482701d8a00157f59f6/Blue%20Peak_logo_transparent.png?v=1736938634586" alt="Blue Peak Logo" class="logo-img">
-                </div>
+                <img src="https://bluepeakfinancialadvisory.website3.me/static/6786196236688f00155b93d6/6786196236688f00155b93d8/67879482701d8a00157f59f6/Blue%20Peak_logo_transparent.png?v=1736938634586" alt="Blue Peak Logo" class="h-10">
                 <span class="text-2xl font-bold tracking-tight" style="color: var(--nav-blue);">Blue Peak</span>
             </div>
 
-            <!-- Links & Socials -->
-            <div class="flex items-center space-x-10">
-                <div class="hidden md:flex space-x-8 text-md font-medium" style="color: var(--nav-blue);">
-                    <a href="#" class="nav-link border-b-2 border-blue-700 pb-1">Home</a>
-                    <a href="#about" class="nav-link">About Us</a>
-                    <a href="#services" class="nav-link">Services</a>
-                    <a href="#contact" class="nav-link">Contact Us</a>
+            <div class="flex items-center space-x-12">
+                <div class="hidden md:flex space-x-8 text-md font-normal" style="color: var(--nav-blue);">
+                    <a href="#home" class="hover:text-blue-600 border-b-2 border-blue-700 pb-1">Home</a>
+                    <a href="#about" class="hover:text-blue-600 transition">About Us</a>
+                    <a href="#services" class="hover:text-blue-600 transition">Services</a>
+                    <a href="#contact" class="hover:text-blue-600 transition">Contact Us</a>
                 </div>
                 <div class="flex items-center space-x-5 text-lg" style="color: var(--nav-blue);">
-                    <a href="#" class="hover:opacity-70 transition"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="hover:opacity-70 transition"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" class="hover:opacity-70 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION (MATCHING SCREENSHOT) -->
-    <header class="hero-section min-h-[550px] flex items-center py-12 md:py-24">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <header id="home" class="hero-section min-h-[600px] flex items-center py-16">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             
-            <!-- Left Text -->
-            <div class="text-white space-y-6">
+            <div class="text-white space-y-8">
                 <h1 class="text-5xl md:text-6xl font-bold leading-tight">
                     BluePeak Financial Advisory
                 </h1>
                 <h2 class="text-2xl md:text-3xl font-light opacity-90">
                     Professional Accounting & Tax Services in Nepal
                 </h2>
-                <p class="text-lg md:text-xl leading-relaxed text-blue-50 max-w-lg font-light">
+                <p class="text-xl leading-relaxed text-blue-50 font-light max-w-lg">
                     Our experts are here to guide and support you at every stage. Get in touch today and move forward with clarity and confidence.
                 </p>
+                <div class="pt-4">
+                    <a href="#contact" class="bg-transparent border border-white text-white px-8 py-3 hover:bg-white hover:text-blue-900 transition font-bold uppercase tracking-widest text-sm">
+                        Get in Touch
+                    </a>
+                </div>
             </div>
 
-            <!-- Right Image Card (Matching Overlay from Screenshot) -->
-            <div class="image-container overflow-hidden">
-                <div class="relative min-h-[350px]">
-                    <!-- Overlay Text -->
-                    <div class="image-overlay-text">
-                        <h3 class="text-xl md:text-2xl font-bold">Your Trusted Partner in</h3>
-                        <h3 class="text-2xl md:text-4xl font-bold text-blue-600 mt-1 uppercase tracking-tight">Growth & Financial Success</h3>
-                        <p class="text-[10px] md:text-xs mt-4 text-gray-500 uppercase tracking-widest font-semibold leading-tight">
+            <div class="image-card">
+                <div class="relative">
+                    <div class="image-overlay-text pt-8">
+                        <h3 class="text-2xl font-bold italic">Your Trusted Partner in</h3>
+                        <h3 class="text-3xl md:text-4xl font-bold text-blue-700 mt-1 uppercase tracking-tighter">Growth & Financial Success</h3>
+                        <p class="text-[10px] md:text-xs mt-4 text-gray-400 uppercase tracking-widest font-bold px-10">
                             Accounting, Audit, Tax, HR & Investment Advisory Services Designed for Your Business
                         </p>
                     </div>
-
-                    <!-- Background Image for the Card -->
-                    <img src="https://images.unsplash.com/photo-1557426272-fc759fbb7a8d?auto=format&fit=crop&q=80&w=1000" 
+                    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1000" 
                          alt="Success Partnership" 
-                         class="w-full h-full object-cover opacity-80 pt-20">
-                    
-                    <div class="growth-chart-overlay"></div>
+                         class="w-full h-auto opacity-90 pt-32">
                 </div>
             </div>
-
         </div>
     </header>
 
-    <!-- CONTENT SECTIONS (RETAINED FROM ORIGINAL) -->
-    <section id="about" class="py-20 bg-gray-50">
+    <section id="about" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl font-bold text-slate-900 mb-6">Welcome to Blue Peak</h2>
-                <p class="text-lg text-slate-600 leading-relaxed italic mb-8">
-                    "Delivering Professional Excellence Since 2025"
-                </p>
-                <div class="text-left bg-white p-10 rounded-lg shadow-sm space-y-6">
-                    <p class="text-slate-700">Blue Peak is a premier professional services firm dedicated to empowering businesses with reliable, forward-thinking financial solutions that drive sustainable growth and instill lasting confidence.</p>
-                    <p class="text-slate-700">Founded by a qualified <strong>Chartered Accountant</strong> with deep expertise in financial reporting, compliance, and strategic advisory, Blue Peak was established on a foundation of integrity, precision, and a client-first philosophy. Our mission is simple yet powerful: to deliver accurate, fully compliant, and genuinely value-adding services that go beyond traditional accounting.</p>
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-2">Welcome to Blue Peak</h2>
+                <h3 class="text-xl text-blue-700 text-center font-semibold mb-12">Delivering Professional Excellence Since 2025</h3>
+                
+                <div class="grid md:grid-cols-1 gap-10 text-lg leading-relaxed text-slate-600">
+                    <p>
+                        Blue Peak is a premier professional services firm dedicated to empowering businesses with reliable, forward-thinking financial solutions that drive sustainable growth and instill lasting confidence.
+                    </p>
+                    <p>
+                        Founded by a qualified <strong>Chartered Accountant</strong> with deep expertise in financial reporting, compliance, and strategic advisory, Blue Peak was established on a foundation of integrity, precision, and a client-first philosophy. 
+                    </p>
+                    <p>
+                        Our mission is simple yet powerful: to deliver accurate, fully compliant, and genuinely value-adding services that go beyond traditional accounting—helping our clients navigate complexity, optimize performance, and achieve their strategic objectives with clarity and assurance.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT INFO -->
-    <section id="contact" class="py-16 bg-white border-t border-gray-100">
+    <section id="services" class="py-24 bg-slate-50">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-12 text-center">
-                <div>
-                    <i class="fas fa-map-marker-alt text-2xl text-blue-700 mb-4"></i>
-                    <h4 class="font-bold text-slate-900 mb-2">Location</h4>
-                    <p class="text-slate-500 text-sm">Shree Nagar Marg Naya Baneshowar, Kathmandu</p>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Services</h2>
+                <div class="h-1 w-20 bg-blue-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-8 border border-gray-100 shadow-sm">
+                    <h4 class="text-xl font-bold mb-4 text-blue-900">Audit & Assurance</h4>
+                    <p class="text-sm text-slate-500 mb-6">Auditing is more than a statutory requirement—it is a foundation for trust. We build confidence among shareholders and lenders through reliable financial reports.</p>
+                    <a href="#" class="text-blue-700 font-bold text-xs uppercase tracking-widest">Learn More</a>
                 </div>
-                <div>
-                    <i class="fas fa-phone-alt text-2xl text-blue-700 mb-4"></i>
-                    <h4 class="font-bold text-slate-900 mb-2">Contact</h4>
-                    <p class="text-slate-500 text-sm">Tel: 9867168048<br>bluepeakfinancialadvisory@gmail.com</p>
+                <div class="service-card bg-white p-8 border border-gray-100 shadow-sm">
+                    <h4 class="text-xl font-bold mb-4 text-blue-900">Strategic HR Services</h4>
+                    <p class="text-sm text-slate-500 mb-6">We help organizations design and implement performance improvement plans, systems, and processes that boost efficiency and deliver measurable results.</p>
+                    <a href="#" class="text-blue-700 font-bold text-xs uppercase tracking-widest">Learn More</a>
                 </div>
-                <div>
-                    <i class="fas fa-clock text-2xl text-blue-700 mb-4"></i>
-                    <h4 class="font-bold text-slate-900 mb-2">Hours</h4>
-                    <p class="text-slate-500 text-sm">Monday-Friday: 9:00AM-6:00PM<br>Saturday-Sunday: Close</p>
+                <div class="service-card bg-white p-8 border border-gray-100 shadow-sm">
+                    <h4 class="text-xl font-bold mb-4 text-blue-900">Investment & Fund Advisory</h4>
+                    <p class="text-sm text-slate-500 mb-6">Expert support in investment decision-making, deal structuring, and compliance for specialized investment funds and private equity in Nepal.</p>
+                    <a href="#" class="text-blue-700 font-bold text-xs uppercase tracking-widest">Learn More</a>
+                </div>
+                <div class="service-card bg-white p-8 border border-gray-100 shadow-sm">
+                    <h4 class="text-xl font-bold mb-4 text-blue-900">KPO Services</h4>
+                    <p class="text-sm text-slate-500 mb-6">Outsourced payroll, accounting, and taxation services for small and mid-sized organizations who wish to focus on their core business.</p>
+                    <a href="#" class="text-blue-700 font-bold text-xs uppercase tracking-widest">Learn More</a>
+                </div>
+                <div class="service-card bg-white p-8 border border-gray-100 shadow-sm">
+                    <h4 class="text-xl font-bold mb-4 text-blue-900">Tax & Regulatory Services</h4>
+                    <p class="text-sm text-slate-500 mb-6">Expert tax advisory and compliance services to manage risk and support strategic decision-making at local and international levels.</p>
+                    <a href="#" class="text-blue-700 font-bold text-xs uppercase tracking-widest">Learn More</a>
+                </div>
+                <div class="service-card bg-white p-8 border border-gray-100 shadow-sm">
+                    <h4 class="text-xl font-bold mb-4 text-blue-900">NFRS & IFRS Advisory</h4>
+                    <p class="text-sm text-slate-500 mb-6">Support in understanding and implementing NFRS standards, including first-time adoption and accurate financial reporting.</p>
+                    <a href="#" class="text-blue-700 font-bold text-xs uppercase tracking-widest">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-10 bg-slate-900 text-slate-400 text-center text-sm">
+    <section id="contact" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <p>&copy; 2025 Blue Peak Financial Advisory. All Rights Reserved.</p>
+            <h2 class="text-4xl font-bold text-center mb-16">Find Us</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div class="text-blue-700 text-2xl mb-4"><i class="fas fa-map-marker-alt"></i></div>
+                    <h5 class="text-xl font-bold mb-2">Location</h5>
+                    <p class="text-slate-500">Shree Nagar Marg Naya Baneshowar<br>Kathmandu, Nepal</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-blue-700 text-2xl mb-4"><i class="fas fa-phone"></i></div>
+                    <h5 class="text-xl font-bold mb-2">Contact</h5>
+                    <p class="text-slate-500">Tel: 9867168048<br>bluepeakfinancialadvisory@gmail.com</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-blue-700 text-2xl mb-4"><i class="fas fa-clock"></i></div>
+                    <h5 class="text-xl font-bold mb-2">Hours</h5>
+                    <p class="text-slate-500">Monday-Friday: 9:00AM-6:00PM<br>Saturday-Sunday: Close</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center items-center space-x-3 mb-6">
+                <img src="https://bluepeakfinancialadvisory.website3.me/static/6786196236688f00155b93d6/6786196236688f00155b93d8/67879482701d8a00157f59f6/Blue%20Peak_logo_transparent.png?v=1736938634586" class="h-8 opacity-80" alt="Logo">
+                <span class="text-xl font-bold">Blue Peak Financial Advisory</span>
+            </div>
+            <p class="text-slate-500 text-sm">© 2025 Blue Peak Financial Advisory. All Rights Reserved.</p>
         </div>
     </footer>
 
