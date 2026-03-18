@@ -402,18 +402,56 @@ button:hover { background:#bf360c; }
 
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-<h1>Contact Us</h1>
-<p>Address: 123 Financial Street, Kathmandu, Nepal<br>
-Email: info@bluepeak.com<br>
-Phone: +977-1-1234567</p>
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea placeholder="Your Message" rows="5" required></textarea>
-<button type="submit">Send Message</button>
-</form>
+<!-- CONTACT US SECTION WITH FEEDBACK -->
+<section id="contact" style="background:#ffe0b2; padding:60px 20px; border-radius:10px; margin-bottom:40px;">
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-start;">
+        
+        <!-- Left: Contact Info + Map -->
+        <div style="flex:1 1 450px; margin-bottom:30px;">
+            <h2 style="font-size:2.2em; color:#ff6f00; margin-bottom:20px;">Find Us</h2>
+            
+            <!-- Location -->
+            <h3 style="font-size:1.5em; color:#ff8f00; margin-bottom:10px;">Location</h3>
+            <p style="text-align:justify; font-size:1.1em; margin-bottom:20px;">
+                Naya Baneshowar<br>
+                M8MQ+432, Shree Nagar Marg, Kathmandu 44600
+            </p>
+
+            <!-- Embedded Google Map -->
+            <iframe src="https://maps.google.com/?cid=10296527106605432771&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAEYASAB&hl=en-US&source=embed"
+                    width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <!-- Contact -->
+            <h3 style="font-size:1.5em; color:#ff8f00; margin-top:30px; margin-bottom:10px;">Contact</h3>
+            <p style="text-align:justify; font-size:1.1em; margin-bottom:20px;">
+                Tel: 9867168048<br>
+                Email: bluepeakfinancialadvisory@gmail.com
+            </p>
+
+            <!-- Hours -->
+            <h3 style="font-size:1.5em; color:#ff8f00; margin-bottom:10px;">Hours</h3>
+            <p style="text-align:justify; font-size:1.1em; margin-bottom:30px;">
+                Monday-Friday: 9:00AM-5:00PM<br>
+                Saturday-Sunday: Closed
+            </p>
+
+            <!-- Feedback Form -->
+            <h3 style="font-size:1.5em; color:#ff8f00; margin-bottom:15px;">Send Us a Message</h3>
+            <form style="display:flex; flex-direction:column; gap:15px;">
+                <input type="text" name="name" placeholder="Your Name" style="padding:10px; border-radius:5px; border:1px solid #ccc; font-size:1em;" required>
+                <input type="email" name="email" placeholder="Your Email" style="padding:10px; border-radius:5px; border:1px solid #ccc; font-size:1em;" required>
+                <input type="text" name="subject" placeholder="Subject" style="padding:10px; border-radius:5px; border:1px solid #ccc; font-size:1em;" required>
+                <textarea name="message" placeholder="Your Message" rows="5" style="padding:10px; border-radius:5px; border:1px solid #ccc; font-size:1em;" required></textarea>
+                <button type="submit" style="background:#ff6f00; color:white; font-size:1.1em; padding:12px; border:none; border-radius:5px; cursor:pointer;">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Right: Optional Image / Decoration -->
+        <div style="flex:1 1 450px; text-align:center; margin-bottom:30px;">
+            <img src="contact-image.jpg" alt="Contact BluePeak" style="max-width:100%; border-radius:10px;">
+        </div>
+
+    </div>
 </section>
 
 <script>
