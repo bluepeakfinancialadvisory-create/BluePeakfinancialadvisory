@@ -4,209 +4,192 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BluePeak Financial Advisory</title>
-
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', sans-serif;
-    }
+/* Reset & Fonts */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
 
-    body {
-        background-color: #f5f7fa;
-        color: #1f2937;
-    }
+/* HEADER */
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#ff6f00;
+    padding:15px 30px;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:100;
+}
+header .logo img { height:50px; }
+header nav a {
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+header nav a:hover { text-decoration:underline; }
 
-    /* HERO SECTION */
-    .hero {
-        background: #3e5c87;
-        color: white;
-        padding: 80px 10%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
+/* SECTIONS */
+section {
+    min-height:100vh;
+    padding:120px 40px 80px 40px;
+    display:none; /* All sections hidden by default */
+}
 
-    .hero-text {
-        flex: 1;
-        min-width: 300px;
-    }
+/* Show active section */
+section.active { display:block; }
 
-    .hero-text h1 {
-        font-size: 42px;
-        margin-bottom: 20px;
-        font-weight: 700;
-    }
+/* HEADINGS */
+h1 { color:#e65100; margin-bottom:20px; }
+h2 { color:#bf360c; margin-bottom:20px; }
 
-    .hero-text h2 {
-        font-size: 20px;
-        margin-bottom: 20px;
-        font-weight: 400;
-    }
+/* PARAGRAPHS */
+p { font-size:1.1em; line-height:1.7; text-align:justify; }
 
-    .hero-text p {
-        font-size: 16px;
-        line-height: 1.6;
-        max-width: 500px;
-    }
+/* FIRST HOME SECTION: Text left, image right */
+.hero {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    background:#fff3e0;
+    padding:80px 40px;
+}
+.hero .hero-text { flex:1 1 500px; margin-right:20px; }
+.hero .hero-text h1 { font-size:2.5em; }
+.hero .hero-text h2 { font-size:1.8em; }
+.hero .hero-text p { margin-bottom:0; }
+.hero .hero-image { flex:1 1 400px; text-align:center; }
+.hero .hero-image img { max-width:100%; border-radius:10px; }
 
-    .hero-img {
-        flex: 1;
-        text-align: center;
-        min-width: 300px;
-    }
+/* SECOND HOME SECTION: Image left, Text right */
+.home-about {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    background:#ffe0b2;
+    padding:80px 40px;
+    max-width:1200px;
+    margin:0 auto;
+}
+.home-about .home-image { flex:1 1 400px; text-align:center; }
+.home-about .home-image img { max-width:100%; border-radius:10px; }
+.home-about .home-text { flex:1 1 500px; margin-left:20px; }
 
-    .hero-img img {
-        width: 100%;
-        max-width: 500px;
-        border-radius: 10px;
-    }
+/* CONTACT FORM */
+form {
+    max-width:500px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+}
+input, textarea {
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ff8f00;
+    border-radius:5px;
+    font-size:1em;
+}
+button {
+    background:#e65100;
+    color:white;
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:1em;
+}
+button:hover { background:#bf360c; }
 
-    /* SECOND SECTION */
-    .about {
-        background: #5f7fa3;
-        color: white;
-        padding: 80px 10%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .about-text {
-        flex: 1;
-        min-width: 300px;
-    }
-
-    .about-text h1 {
-        font-size: 38px;
-        margin-bottom: 15px;
-    }
-
-    .about-text h3 {
-        font-size: 20px;
-        margin-bottom: 20px;
-        font-weight: 400;
-    }
-
-    .about-text p {
-        font-size: 15px;
-        line-height: 1.7;
-        margin-bottom: 20px;
-        max-width: 600px;
-    }
-
-    .buttons {
-        margin-top: 20px;
-    }
-
-    .btn {
-        padding: 12px 25px;
-        margin-right: 10px;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        font-size: 14px;
-    }
-
-    .btn-light {
-        background: #e5e7eb;
-        color: #1f2937;
-    }
-
-    .btn-outline {
-        background: transparent;
-        border: 1px solid white;
-        color: white;
-    }
-
-    .about-img {
-        flex: 1;
-        text-align: center;
-        min-width: 300px;
-    }
-
-    .about-img img {
-        width: 100%;
-        max-width: 500px;
-        border-radius: 10px;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-        .hero, .about {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .hero-text, .about-text {
-            margin-bottom: 30px;
-        }
-    }
+/* RESPONSIVE */
+@media(max-width:768px){
+    header { flex-direction:column; }
+    header nav { margin-top:10px; }
+    .hero, .home-about { flex-direction:column; }
+    .hero .hero-text, .home-about .home-text { margin:0 0 30px 0; text-align:justify; }
+    .home-about .home-text { margin-left:0; }
+}
 </style>
 </head>
-
 <body>
 
-<!-- SECTION 1 -->
-<section class="hero">
-    <div class="hero-text">
-        <h1>BluePeak Financial Advisory</h1>
-        <h2>Professional Accounting & Tax Services in Nepal</h2>
-        <p>
-            Our experts are here to guide and support you at every stage.
-            Get in touch today and move forward with clarity and confidence.
-        </p>
-    </div>
+<!-- HEADER -->
+<header>
+<div class="logo"><img src="logo.jpg" alt="BluePeak Logo"></div>
+<nav>
+<a onclick="showSection('home')">Home</a>
+<a onclick="showSection('about')">About Us</a>
+<a onclick="showSection('services')">Services</a>
+<a onclick="showSection('contact')">Contact Us</a>
+</nav>
+</header>
 
-    <div class="hero-img">
-        <!-- Replace with your first image -->
-        <img src="your-image-1.jpg" alt="Financial Meeting">
-    </div>
-</section>
-
-<!-- SECTION 2 -->
-<section class="about">
-    <div class="about-text">
-        <h1>Welcome to Blue Peak</h1>
-        <h3>Delivering Professional Excellence Since 2025</h3>
-
-        <p>
-            Blue Peak is a premier professional services firm dedicated to empowering
-            businesses with reliable, forward-thinking financial solutions that drive
-            sustainable growth and instill lasting confidence.
-        </p>
-
-        <p>
-            Founded by a qualified Chartered Accountant with deep expertise in financial
-            reporting, compliance, and strategic advisory, Blue Peak was established on a
-            foundation of integrity, precision, and a client-first philosophy. Our mission
-            is simple yet powerful: to deliver accurate, fully compliant, and genuinely
-            value-adding services that go beyond traditional accounting—helping our clients
-            navigate complexity, optimize performance, and achieve their strategic objectives
-            with clarity and assurance.
-        </p>
-
-        <div class="buttons">
-            <button class="btn btn-light">About Us</button>
-            <button class="btn btn-outline">Explore Services</button>
+<!-- HOME PAGE -->
+<section id="home" class="active">
+    <!-- FIRST SECTION -->
+    <div class="hero">
+        <div class="hero-text">
+            <h1>BluePeak Financial Advisory</h1>
+            <h2>Professional Accounting & Tax Services in Nepal</h2>
+            <p>Our experts are here to guide and support you at every stage. Get in touch today and move forward with clarity and confidence.</p>
+        </div>
+        <div class="hero-image">
+            <img src="hero1.jpg" alt="Professional Team">
         </div>
     </div>
 
-    <div class="about-img">
-        <!-- Replace with your second image -->
-        <img src="your-image-2.jpg" alt="Office">
+    <!-- SECOND SECTION -->
+    <div class="home-about">
+        <div class="home-image">
+            <img src="hero2.jpg" alt="Business Solutions">
+        </div>
+        <div class="home-text">
+            <h1>Welcome to Blue Peak</h1>
+            <h2>Delivering Professional Excellence Since 2025</h2>
+            <p>Blue Peak is a premier professional services firm dedicated to empowering businesses with reliable, forward-thinking financial solutions that drive sustainable growth and instill lasting confidence.</p>
+            <p>Founded by a qualified Chartered Accountant with deep expertise in financial reporting, compliance, and strategic advisory, Blue Peak was established on a foundation of integrity, precision, and a client-first philosophy. Our mission is simple yet powerful: to deliver accurate, fully compliant, and genuinely value-adding services that go beyond traditional accounting—helping our clients navigate complexity, optimize performance, and achieve their strategic objectives with clarity and assurance.</p>
+        </div>
     </div>
 </section>
 
+<!-- ABOUT US -->
+<section id="about">
+<h1>About Us</h1>
+<p>BluePeak Financial Advisory is committed to delivering expert financial guidance for individuals and businesses. Our team of professionals ensures every client achieves sustainable financial growth through innovative strategies and personalized service.</p>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<h1>Our Services</h1>
+<p>We offer a wide range of services including investment planning, risk management, tax advisory, business consulting, and more. Our mission is to empower clients with the knowledge and tools necessary to make confident financial decisions.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h1>Contact Us</h1>
+<p>Address: 123 Financial Street, Kathmandu, Nepal<br>
+Email: info@bluepeak.com<br>
+Phone: +977-1-1234567</p>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" rows="5" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+<script>
+// Simple JS to show one section at a time
+function showSection(id){
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
 </body>
 </html>
-<ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-</nav>
