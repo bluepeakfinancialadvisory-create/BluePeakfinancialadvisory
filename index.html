@@ -3,248 +3,464 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Peak Financial Advisory | Professional Accounting & Tax Services in Nepal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Blue Peak Financial Advisory | Professional Excellence</title>
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary-blue: #004080;
-            --light-blue: #e6f2ff;
-            --accent-gold: #c5a059;
-            --text-dark: #333;
-            --text-light: #fff;
-            --bg-gray: #f9f9f9;
+            --midnight: #0A192F;
+            --corporate-blue: #112240;
+            --electric-blue: #233554;
+            --accent-gold: #C5A059;
+            --pure-white: #FFFFFF;
+            --off-white: #F8F9FB;
+            --text-main: #E6F1FF;
+            --text-muted: #8892B0;
+            --text-dark: #0A192F;
+            --transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+            --container-max: 1200px;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: var(--text-dark); scroll-behavior: smooth; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        /* Navigation */
-        nav {
-            background: var(--text-light);
-            padding: 1rem 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .section-tag {
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: var(--accent-gold);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: var(--midnight);
+            padding: 1.2rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
         }
-        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary-blue); text-decoration: none; }
-        .nav-links { list-style: none; display: flex; }
-        .nav-links li { margin-left: 2rem; }
-        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 400; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--primary-blue); }
 
-        /* Sections */
-        section { padding: 4rem 10%; }
-        h2 { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 1rem; }
-        h3 { font-size: 1.8rem; color: var(--primary-blue); margin-bottom: 1rem; }
-        h5 { font-size: 1.2rem; color: var(--accent-gold); margin-bottom: 1rem; text-transform: uppercase; }
-        p { margin-bottom: 1.2rem; }
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-        /* Hero Section */
-        #home {
-            background: linear-gradient(rgba(0, 64, 128, 0.8), rgba(0, 64, 128, 0.8)), 
-                        url('https://images.unsplash.com/photo-1454165833767-027ffae93992?auto=format&fit=crop&q=80&w=1920') center/cover;
-            height: 90vh;
+        .logo-box {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: var(--text-light);
+            text-decoration: none;
         }
-        #home h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
-        #home .subtitle { font-size: 1.5rem; margin-bottom: 2rem; }
-        .btn { padding: 0.8rem 2rem; background: var(--accent-gold); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
 
-        /* About Section */
-        .mission-vision { display: flex; gap: 2rem; margin-top: 2rem; }
-        .mv-card { flex: 1; background: var(--light-blue); padding: 2rem; border-radius: 8px; }
+        .logo-main {
+            font-family: 'Cinzel', serif;
+            color: var(--pure-white);
+            font-size: 1.4rem;
+            letter-spacing: 0.1em;
+        }
 
-        /* Leadership */
-        .team { display: flex; gap: 2rem; margin-top: 3rem; flex-wrap: wrap; }
-        .team-member { flex: 1; min-width: 300px; text-align: center; background: white; padding: 2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .team-member img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 5px solid var(--light-blue); }
+        .logo-sub {
+            font-size: 0.6rem;
+            color: var(--accent-gold);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+        }
 
-        /* Services */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .service-card { background: var(--bg-gray); padding: 2rem; border-left: 5px solid var(--primary-blue); transition: transform 0.3s; }
-        .service-card:hover { transform: translateY(-5px); }
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
 
-        /* Contact */
-        .contact-container { display: flex; gap: 4rem; }
-        .contact-info { flex: 1; }
-        .contact-form { flex: 1; background: var(--bg-gray); padding: 2rem; border-radius: 8px; }
-        .form-group { margin-bottom: 1rem; }
-        .form-group label { display: block; margin-bottom: 0.5rem; }
-        .form-group input, .form-group textarea { width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; }
-        .submit-btn { background: var(--primary-blue); color: white; padding: 1rem 2rem; border: none; cursor: pointer; width: 100%; font-size: 1rem; }
+        .nav-item {
+            color: var(--pure-white);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            position: relative;
+            padding: 0.5rem 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
 
-        /* Footer */
-        footer { background: var(--primary-blue); color: white; padding: 3rem 10%; text-align: center; }
-        .footer-links { margin-bottom: 1rem; }
-        .footer-links a { color: white; margin: 0 1rem; text-decoration: none; font-size: 0.9rem; }
+        .nav-item:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--accent-gold);
+            transition: var(--transition);
+        }
+
+        .nav-item.active { color: var(--accent-gold); }
+        .nav-item.active:after, .nav-item:hover:after { width: 100%; }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--pure-white);
+            margin: 5px 0;
+        }
+
+        /* --- Hero Architecture --- */
+        .hero {
+            background-color: var(--midnight);
+            color: var(--pure-white);
+            padding: 7rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(35, 53, 84, 0.4) 0%, transparent 70%);
+        }
+
+        .hero-content { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
+        .hero h1 { font-size: 3.2rem; margin-bottom: 1.5rem; line-height: 1.1; }
+        .hero p { font-size: 1.1rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2.5rem; }
+
+        /* --- Main Content Wrappers --- */
+        .content-wrap { max-width: var(--container-max); margin: 0 auto; padding: 6rem 2rem; }
+        
+        .executive-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .image-frame {
+            position: relative;
+            padding: 0.8rem;
+            border: 1px solid rgba(197, 160, 89, 0.4);
+        }
+
+        .image-frame img { width: 100%; display: block; filter: grayscale(10%); }
+
+        .block-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 2px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+            border-bottom: 3px solid var(--midnight);
+            height: 100%;
+            transition: var(--transition);
+        }
+
+        .block-card:hover { transform: translateY(-8px); border-bottom-color: var(--accent-gold); }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-sub-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .service-sub-list li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .service-sub-list li::before {
+            content: '•';
+            color: var(--accent-gold);
+            margin-right: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* --- Tab System --- */
+        .tab-panel { display: none; animation: fadeIn 0.8s ease forwards; }
+        .tab-panel.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* --- Member Cards --- */
+        .member-card {
+            display: flex;
+            background: var(--midnight);
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .member-img { width: 35%; min-height: 350px; background-size: cover; background-position: center; }
+        .member-info { width: 65%; padding: 3rem; }
+        .member-info h3 { color: var(--accent-gold); margin-bottom: 0.2rem; }
+        .member-info .title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-muted); display: block; margin-bottom: 1.5rem; }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--midnight);
+            color: var(--text-muted);
+            padding: 5rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        .footer-logo { font-family: 'Cinzel', serif; color: white; font-size: 1.2rem; margin-bottom: 1.5rem; display: block; letter-spacing: 0.2em; }
+
+        /* --- Responsive --- */
+        @media (max-width: 968px) {
+            .executive-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .member-card { flex-direction: column; }
+            .member-img { width: 100%; height: 300px; }
+            .member-info { width: 100%; padding: 2rem; }
+            .hero h1 { font-size: 2.4rem; }
+        }
 
         @media (max-width: 768px) {
-            .contact-container { flex-direction: column; }
-            .mission-vision { flex-direction: column; }
-            #home h1 { font-size: 2.5rem; }
+            .mobile-toggle { display: block; }
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                height: 0;
+                background: var(--midnight);
+                flex-direction: column;
+                overflow: hidden;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            .nav-links.active { height: 100vh; padding: 2rem; }
+            .nav-item { font-size: 1.1rem; padding: 1.2rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#home" class="logo">Blue Peak</a>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
-
-    <section id="home">
-        <h1>BluePeak Financial Advisory</h1>
-        <p class="subtitle">Professional Accounting & Tax Services in Nepal</p>
-        <p>Our experts are here to guide and support you at every stage. Get in touch today and move forward with clarity and confidence.</p>
-        <div style="margin-top: 2rem;">
-            <a href="#about" class="btn" style="margin-right: 10px;">About Us</a>
-            <a href="#services" class="btn">Explore Services</a>
-        </div>
-    </section>
-
-    <section>
-        <h2>Welcome to Blue Peak</h2>
-        <h5>Delivering Professional Excellence Since 2025</h5>
-        <p>Blue Peak is a premier professional services firm dedicated to empowering businesses with reliable, forward-thinking financial solutions that drive sustainable growth and instill lasting confidence.</p>
-        <p>Founded by a qualified Chartered Accountant with deep expertise in financial reporting, compliance, and strategic advisory, Blue Peak was established on a foundation of integrity, precision, and a client-first philosophy. Our mission is simple yet powerful: to deliver accurate, fully compliant, and genuinely value-adding services that go beyond traditional accounting—helping our clients navigate complexity, optimize performance, and achieve their strategic objectives with clarity and assurance.</p>
-    </section>
-
-    <section id="about" style="background-color: var(--bg-gray);">
-        <h2>About BluePeak</h2>
-        <h5>Where Trust Meets Expertise</h5>
-        <p>At BluePeak, we understand that today’s businesses, whether startups, SMEs, established corporates, or professional firms face growing financial, regulatory, and operational challenges. From navigating complex tax laws and evolving Nepal Financial Reporting Standards (NFRS/IFRS) to managing payroll, ensuring accurate financial reporting, and maintaining full regulatory compliance, these responsibilities can quickly become overwhelming. That’s exactly where we step in.</p>
+<header>
+    <div class="nav-inner">
+        <a href="#" class="logo-box" onclick="switchTab('home')">
+            <span class="logo-main">BLUE PEAK</span>
+            <span class="logo-sub">FINANCIAL ADVISORY</span>
+        </a>
         
-        <div class="mission-vision">
-            <div class="mv-card">
-                <h3>Our Mission</h3>
-                <p>To empower businesses and professionals with clear, practical, and strategic financial solutions that drive growth, ensure compliance, and build long‑term success. We are committed to delivering exceptional advisory services with integrity, innovation, and client‑focused excellence.</p>
-            </div>
-            <div class="mv-card">
-                <h3>Our Vision</h3>
-                <p>To be a trusted, innovative, and modern financial advisory firm recognized for excellence in accounting, taxation, auditing, payroll, and NFRS/IFRS advisory. We aim to empower businesses and professionals to achieve sustainable growth.</p>
-            </div>
-        </div>
+        <button class="mobile-toggle" id="mobileToggle">
+            <span></span><span></span><span></span>
+        </button>
 
-        <h3 style="margin-top: 4rem; text-align: center;">Meet Our Leaders</h3>
-        <div class="team">
-            <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" alt="CA Baburam Khanal">
-                <h3>CA Baburam Khanal</h3>
-                <h5>Founder & Managing Partner</h5>
-                <p>Baburam Khanal holds a Master’s degree in Economics from Tribhuvan University and is a Chartered Accountant of Nepal. He brings over five years of professional experience in consulting, assurance, and tax advisory services across government agencies and private sector organizations.</p>
-            </div>
-            <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" alt="CA Priya Acharya">
-                <h3>CA Priya Acharya</h3>
-                <h5>Managing Director</h5>
-                <p>Priya Acharya holds a Master’s degree in Economics from Tribhuvan University and is a Chartered Accountant of Nepal. She brings over three years of professional experience in consulting, assurance, and tax advisory services. An expert in law and financing.</p>
-            </div>
+        <nav class="nav-links" id="navLinks">
+            <div class="nav-item active" data-tab="home" onclick="switchTab('home')">HOME</div>
+            <div class="nav-item" data-tab="about" onclick="switchTab('about')">ABOUT US</div>
+            <div class="nav-item" data-tab="services" onclick="switchTab('services')">SERVICES</div>
+            <div class="nav-item" data-tab="contact" onclick="switchTab('contact')">CONTACT</div>
+        </nav>
+    </div>
+</header>
+
+<!-- HOME TAB -->
+<div id="home" class="tab-panel active">
+    <section class="hero">
+        <div class="hero-content">
+            <span class="section-tag">Since 2025</span>
+            <h1>Blue Peak Financial Advisory</h1>
+            <p>Professional Accounting & Tax Services in Nepal. Our experts are here to guide and support you at every stage of your business journey. Get in touch today and move forward with clarity and confidence.</p>
         </div>
     </section>
 
-    <section id="services">
-        <h2 style="text-align: center;">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
+    <div class="content-wrap">
+        <div class="executive-grid">
+            <div class="image-frame">
+                <img src="hero_image.jpg" alt="Professional Excellence">
+            </div>
+            <div>
+                <span class="section-tag">Welcome</span>
+                <h2>Delivering Professional <br>Excellence Since 2025</h2>
+                <p>Blue Peak Financial Advisory is a modern professional services firm committed to empowering businesses with reliable and forward-thinking financial solutions. We help organizations achieve sustainable growth while maintaining full compliance and building long-term confidence.</p>
+                <p>Founded by a qualified Chartered Accountant, Blue Peak is built on a foundation of integrity, precision, and a strong client-first philosophy. Our expertise spans financial reporting, compliance, taxation, and strategic advisory.</p>
+                <p>Our mission is to go beyond traditional accounting by delivering accurate, compliant, and value-driven services. We support our clients in navigating complex financial environments, improving performance, and achieving their strategic goals with clarity and assurance.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 8rem;">
+            <span class="section-tag" style="text-align: center;">Competencies</span>
+            <h2 style="text-align: center; margin-bottom: 4rem;">Our Core Services</h2>
+            <div class="grid-3">
+                <div class="block-card">
+                    <h3>Audit & Assurance</h3>
+                    <p>We provide independent audit and assurance services that enhance the credibility of financial information and build trust among stakeholders.</p>
+                </div>
+                <div class="block-card">
+                    <h3>Strategic HR Services</h3>
+                    <p>We design and implement HR systems and performance strategies that improve efficiency and strengthen workforce management.</p>
+                </div>
+                <div class="block-card">
+                    <h3>Investment & Fund Advisory</h3>
+                    <p>We support investment decisions, deal structuring, and compliance for businesses, private equity, and venture capital initiatives.</p>
+                </div>
+                <div class="block-card">
+                    <h3>Key Process Outsourcing (KPO)</h3>
+                    <p>We offer outsourced accounting, payroll, taxation, and compliance services so businesses can focus on their core operations.</p>
+                </div>
+                <div class="block-card">
+                    <h3>Tax & Regulatory Services</h3>
+                    <p>We provide expert tax advisory and compliance solutions to help businesses manage risks and meet regulatory requirements.</p>
+                </div>
+                <div class="block-card">
+                    <h3>NFRS & IFRS Advisory</h3>
+                    <p>We assist businesses in understanding and implementing financial reporting standards to ensure accurate and compliant reporting.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ABOUT TAB -->
+<div id="about" class="tab-panel">
+    <div class="content-wrap">
+        <div class="executive-grid" style="margin-bottom: 8rem;">
+            <div>
+                <span class="section-tag">About Blue Peak</span>
+                <h2>Where Trust Meets <br>Expertise.</h2>
+                <p>At Blue Peak, we understand that businesses today—whether startups, SMEs, or established organizations—face increasing financial and regulatory complexities. From tax compliance and financial reporting to payroll management and regulatory obligations, these challenges can be demanding.</p>
+                <p>We act as your strategic partner, simplifying these complexities and delivering practical, tailored solutions that support sustainable growth.</p>
+            </div>
+            <div class="image-frame">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200" alt="Corporate Partnership">
+            </div>
+        </div>
+
+        <div style="margin-bottom: 8rem;">
+            <span class="section-tag">Capabilities</span>
+            <h2>What We Do</h2>
+            <div class="grid-3" style="margin-top: 3rem;">
+                <div class="block-card">
+                    <h4>Financial Reporting & Compliance</h4>
+                    <p>We prepare and review financial statements in accordance with NFRS and IFRS, ensuring accuracy, transparency, and audit readiness.</p>
+                </div>
+                <div class="block-card">
+                    <h4>Tax Advisory & Planning</h4>
+                    <p>We provide strategic tax solutions, including return filing, VAT compliance, and optimization for both businesses and individuals.</p>
+                </div>
+                <div class="block-card">
+                    <h4>Payroll & HR Compliance</h4>
+                    <p>We manage payroll processes and statutory deductions, ensuring full compliance with regulations.</p>
+                </div>
+                <div class="block-card">
+                    <h4>Business Advisory & Decision Support</h4>
+                    <p>We assist with budgeting, forecasting, and financial analysis to support informed decision-making.</p>
+                </div>
+                <div class="block-card">
+                    <h4>Regulatory & Outsourcing Support</h4>
+                    <p>We help with company registration, filings, internal controls, and outsourcing of financial functions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="executive-grid" style="margin-bottom: 8rem;">
+            <div class="block-card" style="background: var(--midnight); color: white;">
+                <h3 style="color: var(--accent-gold);">Our Mission</h3>
+                <p style="color: var(--text-muted);">To empower businesses with clear, practical, and strategic financial solutions that drive growth, ensure compliance, and support long-term success. We are committed to delivering services with integrity, innovation, and a client-focused approach.</p>
+            </div>
+            <div class="block-card" style="background: var(--electric-blue); color: white;">
+                <h3 style="color: var(--accent-gold);">Our Vision</h3>
+                <p style="color: var(--text-muted);">To be a trusted and innovative financial advisory firm recognized for excellence in accounting, taxation, auditing, payroll, and financial reporting advisory. We aim to help businesses navigate complexity and achieve sustainable growth.</p>
+            </div>
+        </div>
+
+        <span class="section-tag" style="text-align: center;">Partners</span>
+        <h2 style="text-align: center; margin-bottom: 4rem;">Leadership Team</h2>
+        <div class="leadership-grid">
+            <div class="member-card">
+                <div class="member-img" style="background-image: url('baburam.jpg')"></div>
+                <div class="member-info">
+                    <h3>CA Baburam Khanal</h3>
+                    <span class="title">Founder & Managing Partner</span>
+                    <p>Baburam Khanal holds a Master’s degree in Economics and is a Chartered Accountant of Nepal. He has over five years of experience in consulting, assurance, and tax advisory across government, private sector, and development projects. His expertise lies in financial reporting, compliance, and strategic advisory.</p>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="member-img" style="background-image: url('priya.jpg')"></div>
+                <div class="member-info">
+                    <h3>CA Priya Acharya</h3>
+                    <span class="title">Managing Director</span>
+                    <p>Priya Acharya holds a Master’s degree in Economics and is a Chartered Accountant of Nepal. With over three years of experience, she specializes in legal and financial advisory, helping organizations navigate complex regulatory and financial environments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SERVICES TAB -->
+<div id="services" class="tab-panel">
+    <div class="content-wrap">
+        <span class="section-tag" style="text-align: center;">Expertise</span>
+        <h2 style="text-align: center; margin-bottom: 4rem;">Our Services</h2>
+        
+        <div class="grid-3">
+            <!-- Service 1 -->
+            <div class="block-card">
                 <h3>Audit & Assurance</h3>
-                <p>At Blue Peak, we believe auditing is more than a statutory requirement—it is a foundation for trust. Our services include financial statement audit, agreed-upon procedures, risk-based internal audit, and IT system audit.</p>
+                <p>Auditing at Blue Peak goes beyond compliance—it builds trust. We provide reliable financial assessments that enhance transparency and support informed decision-making.</p>
+                <ul class="service-sub-list">
+                    <li>Financial statement audits</li>
+                    <li>Agreed-upon procedures</li>
+                    <li>Expenditure verification</li>
+                    <li>Risk-based internal audits</li>
+                    <li>IT system audits</li>
+                    <li>IT risk assurance</li>
+                    <li>Business risk assurance</li>
+                    <li>IFRS assurance</li>
+                </ul>
             </div>
-            <div class="service-card">
+            <!-- Service 2 -->
+            <div class="block-card">
                 <h3>Strategic HR Services</h3>
-                <p>We help organizations develop and implement performance improvement plans, systems, and processes that enhance efficiency. Services include comprehensive HR solutions and optimizing human capital.</p>
-            </div>
-            <div class="service-card">
-                <h3>Investment & Fund Advisory</h3>
-                <p>Providing expert support in investment decision-making, deal structuring, and compliance. Services include due diligence audit, valuation of target entities, and FDI support.</p>
-            </div>
-            <div class="service-card">
-                <h3>Key Process Outsourcing (KPO)</h3>
-                <p>Focus on your core business while we handle bookkeeping, accounting, payroll processing, and tax regulatory compliance for small and mid-sized organizations.</p>
-            </div>
-            <div class="service-card">
-                <h3>Tax & Regulatory Services</h3>
-                <p>Managing risks and ensuring compliance at local and international levels. Expertise in international tax, indirect/direct taxes, and merger & acquisition tax.</p>
-            </div>
-            <div class="service-card">
-                <h3>NFRS & IFRS Advisory</h3>
-                <p>Support for understanding and implementing NFRS, including first-time adoption, major accounting changes, and ongoing compliance support.</p>
-            </div>
-        </div>
-        
-        <div style="background: var(--light-blue); padding: 3rem; margin-top: 4rem; text-align: center; border-radius: 8px;">
-            <h3>Seeking Expert Guidance?</h3>
-            <p>Our experienced team of chartered accountants and advisors provides tailored, reliable guidance to help your business achieve clarity. Contact us today for personalized expert support.</p>
-            <a href="#contact" class="btn">Get Expert Advice Today</a>
-        </div>
-    </section>
-
-    <section id="contact" style="background-color: var(--bg-gray);">
-        <h2>Contact Us</h2>
-        <h5>We're looking forward to hearing from you.</h5>
-        
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Find Us</h3>
-                <p><strong>Location:</strong><br>
-                Naya Baneshowar, M8MQ+432, Shree Nagar Marg, Kathmandu 44600, Nepal</p>
-                
-                <p><strong>Contact:</strong><br>
-                Tel: 9867168048<br>
-                Email: bluepeakfinancialadvisory@gmail.com</p>
-                
-                <p><strong>Hours:</strong><br>
-                Monday-Friday: 9:00AM - 5:00PM<br>
-                Saturday-Sunday: Closed</p>
-            </div>
-
-            <div class="contact-form">
-                <form>
-                    <div class="form-group">
-                        <label>First Name*</label>
-                        <input type="text" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Last Name*</label>
-                        <input type="text" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Email*</label>
-                        <input type="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Message*</label>
-                        <textarea rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Submit</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-links">
-            <a href="#home">Home</a> | 
-            <a href="#about">About</a> | 
-            <a href="#services">Services</a> | 
-            <a href="#contact">Contact</a>
-        </div>
-        <p>&copy; 2025 Blue Peak Financial Advisory. All Rights Reserved.</p>
-        <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Created based on BluePeak Financial Advisory Website Content</p>
-    </footer>
-
-</body>
-</html>
+                <p>We help organizations improve efficiency through structured HR strategies and optimized processes.</p>
+                <ul class="service-sub-list">
+                    <li>Performance improvement plans</li>
+                    <li>HR systems and process design</li>
+                    <li>HR advisory and consulting</li>
